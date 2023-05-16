@@ -112,9 +112,10 @@ public class MainModel {
         
         try {
         	Process p = processBuilder.start();
+        	p.waitFor();
         	System.out.println("Successfully called microservice.");
         }
-        catch (IOException e) {
+        catch (IOException | InterruptedException e) {
             System.out.println("Exception happened when calling microservice.");
             e.printStackTrace();
         }
@@ -128,10 +129,8 @@ public class MainModel {
                 sb.append(System.lineSeparator());
                 line = br.readLine();
             }
-            String value = sb.toString();
-            
-            
-            return Integer.parseInt(value);
+            String value = sb.toString().split("\n")[0].split(" ")[1];
+            return (int)Double.parseDouble(value);
         } catch(IOException e) {
             System.out.println("Exception happened when calling microservice.");
             e.printStackTrace();

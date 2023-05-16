@@ -68,9 +68,9 @@ public class SettingView extends JFrame{
 		panel_1.setLayout(new BorderLayout(0, 0));
 		
 		JTextPane txtpnGuide = new JTextPane();
-		txtpnGuide.setText("This program is used to provide meal plan recommendations based on"
-				+ "user preference. To request for recommendations, select the meals, amount of"
-				+ "calorie, and number of people that suit your needs. You can further personalize"
+		txtpnGuide.setText("This program is used to provide meal plan recommendations based on "
+				+ "user preference. To request for recommendations, select the meals, amount of "
+				+ "calorie, and number of people that suit your needs. You can further personalize "
 				+ "your meal plans using the advanced options below.");
 		panel_1.add(txtpnGuide, BorderLayout.CENTER);
 		

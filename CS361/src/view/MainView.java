@@ -288,7 +288,7 @@ public class MainView extends JFrame{
 				if (total == 0) {
 					printMealHeader("Calorie calculator is temporarily unavailable.");
 				} else {
-					printMealHeader("The total amound of calorie ");
+					printMealHeader("The total amount of calorie is " + String.valueOf(total) + ".");
 				}
 			} catch (IOException e) {
 				printMealHeader("Calorie calculator is temporarily unavailable.");
